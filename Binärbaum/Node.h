@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+
 using namespace std;
 
 class Node
@@ -12,9 +13,10 @@ class Node
 	public:
 		Node();
 
-	   ~Node();
-		
-	    Node(int);
+
+		~Node();
+
+		Node(int);
 
 		int get_data();
 
