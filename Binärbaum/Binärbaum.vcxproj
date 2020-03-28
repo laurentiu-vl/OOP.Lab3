@@ -18,6 +18,14 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BTree.cpp" />
+    <ClCompile Include="Node.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BTree.h" />
+    <ClInclude Include="Node.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{1DF5A627-A090-42F3-B931-222B9F9F810F}</ProjectGuid>
