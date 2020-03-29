@@ -20,4 +20,8 @@ class Node
 		int get_data();
 
 		void set_data(int);
+
+		Node* get_left();
+
+		Node* get_right();
 };

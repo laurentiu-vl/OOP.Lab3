@@ -19,3 +19,47 @@ Node* BTree::get_root()
 	return root;
 }
 
+int BTree::countNodes(Node* n)
+{
+    if (n == NULL) 
+    {
+        return 0;
+    }
+    else 
+    {
+        return 1 + countNodes(n->get_left()) + countNodes(n->get_right());
+    }
+}
+
+int BTree::countEdges(Node* n)
+{
+    if (n == NULL)
+    {
+        return 0;
+    }
+    else
+    {
+        return countNodes(n) - 1;
+    }
+
+}
+
+int BTree::countHeight(Node* n)
+{
+    if (n == NULL)
+        return 0;
+    else
+    {
+        int leftDepth = countHeight(n->get_left());
+        int rightDepth = countHeight(n->get_right());
+
+        if (leftDepth > rightDepth)
+            return (leftDepth + 1);
+        else return(rightDepth + 1);
+    }
+
+}
+
+
+
+

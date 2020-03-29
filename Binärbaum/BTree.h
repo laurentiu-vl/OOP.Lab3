@@ -28,13 +28,13 @@ class BTree
 			void remove(int);
 
 
-			int countNodes(Node* node);
+			int countNodes(Node* n);
 
 
-			int countEdges(Node* node);
+			int countEdges(Node* n);
 
 
-			int height(Node* node);;
+			int countHeight(Node* n);
 
 	//string methode: pre, in, ..
 };
