@@ -27,10 +27,10 @@ int Node::get_data()
 	return this->data;
 }
 
-void Node::set_data(int data1)
+/*void Node::set_data(int data1)
 {
 	this->data = data1;
-}
+}*/
 
 Node* Node::get_left()
 {
@@ -41,3 +41,4 @@ Node* Node::get_right()
 {
 	return this->right;
 }
+

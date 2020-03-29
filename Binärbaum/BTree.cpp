@@ -69,12 +69,14 @@ Node* BTree::insertNode(Node* n, int data)
     else
     {
         if (data < n->get_data())
-            n->get_left() = insertNode(n->get_left(), data);
+            n->left = insertNode(n->get_left(), data);
 
-        else n->get_right() = insertNode(n->get_right(), data);
+        else n->right = insertNode(n->get_right(), data);
     }
     return n;
 }
+
+
 
 
 

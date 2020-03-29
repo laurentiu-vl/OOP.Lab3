@@ -19,9 +19,18 @@ class Node
 
 		int get_data();
 
-		void set_data(int);
+		int set_data(int);
 
 		Node* get_left();
 
 		Node* get_right();
+
+		//Node* set_left(int);  Am pus friend class BTree si nu mai trebuie setter si gettere. Dar am gett., nu le-am mai sters din BTree.cpp si Node.cpp
+
+		//Node* set_right(int);
+
+	public:
+		friend class BTree;
+		
+		
 };

@@ -20,7 +20,7 @@ class BTree
 
 			~BTree();
 
-			Node* get_root();
+			Node* get_root(); //folosesc la insert la main
 
 			Node* insertNode(Node*, int);
 
