@@ -4,3 +4,18 @@
 
 using namespace std;
 
+BTree::BTree()
+{
+	
+}
+
+BTree::BTree(int data)
+{
+	this->root = new Node(data);
+}
+
+Node* BTree::get_root()
+{
+	return root;
+}
+

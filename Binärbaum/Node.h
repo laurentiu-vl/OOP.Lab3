@@ -13,7 +13,6 @@ class Node
 	public:
 		Node();
 
-
 		~Node();
 
 		Node(int);
