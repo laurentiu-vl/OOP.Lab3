@@ -69,15 +69,34 @@ Node* BTree::insertNode(Node* n, int data)
     else
     {
         if (data < n->get_data())
-            n->left = insertNode(n->get_left(), data);
+            n->left = insertNode(n->get_left(), data); 
 
         else n->right = insertNode(n->get_right(), data);
     }
     return n;
 }
 
+Node* BTree::removeNode(Node* n, int data) 
+{
 
+}
 
+string BTree::inOrder(Node* n)
+{
+    if (n != NULL)
+    {
+        return inOrder(n->left) + to_string(n->data) + " " + inOrder(n->right); //dam cu cout in main fiindca returneaza;
+    }
+}
 
+string BTree::postOrder(Node* n)
+{
+
+}
+
+string BTree::preOrder(Node* n)
+{
+
+}
 
 

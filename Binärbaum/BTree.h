@@ -1,6 +1,7 @@
 #pragma once
 #include "Node.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -20,21 +21,22 @@ class BTree
 
 			~BTree();
 
-			Node* get_root(); //folosesc la insert la main
+			Node* get_root(); 
 
 			Node* insertNode(Node*, int);
 
-
-			Node* removeNode(Node*, int);
-
+			Node* removeNode(Node*, int); //de facut;
 
 			int countNodes(Node* n);
 
-
 			int countEdges(Node* n);
-
 
 			int countHeight(Node* n);
 
-	//string methode: pre, in, ..
+			string inOrder(Node*);
+
+			string preOrder(Node*); //de facut;
+
+			string postOrder(Node*); //de facut;
+
 };
