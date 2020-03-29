@@ -20,10 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BTree.cpp" />
+    <ClCompile Include="BTTest.cpp" />
+    <ClCompile Include="Main_BT.cpp" />
     <ClCompile Include="Node.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BTree.h" />
+    <ClInclude Include="BTTest.h" />
     <ClInclude Include="Node.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

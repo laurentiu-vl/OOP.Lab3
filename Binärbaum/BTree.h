@@ -22,10 +22,10 @@ class BTree
 
 			Node* get_root();
 
-			void insert(int);
+			Node* insertNode(Node*, int);
 
 
-			void remove(int);
+			Node* removeNode(Node*, int);
 
 
 			int countNodes(Node* n);

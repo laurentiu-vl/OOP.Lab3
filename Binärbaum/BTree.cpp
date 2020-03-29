@@ -60,6 +60,22 @@ int BTree::countHeight(Node* n)
 
 }
 
+Node* BTree::insertNode(Node* n, int data)
+{
+    if (n == NULL)
+    {
+        return (n = new Node(data));
+    }
+    else
+    {
+        if (data < n->get_data())
+            n->get_left() = insertNode(n->get_left(), data);
+
+        else n->get_right() = insertNode(n->get_right(), data);
+    }
+    return n;
+}
+
 
 
 
