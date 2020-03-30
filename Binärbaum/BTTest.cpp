@@ -43,17 +43,25 @@ void test()
 	assert(t->countEdges(t->get_root()) == 10);
 	assert(t->countHeight(t->get_root()) == 4);
 	
-	cout << "FOR EACH TEST: first row -> function; second row -> expected result" << endl;
-	cout << "inOrder:" << endl;
+	cout << "FOR EACH TEST: first row -> function; second row -> expected result";
+	cout << endl;
+
+	cout << "inOrder:";
 	t->inOrder(t->get_root());
 	cout << endl << in << endl;
+	cout << endl;
+
 	cout << "preOrder:" << endl;
 	t->preOrder(t->get_root());
 	cout << endl << pre << endl;
+	cout << endl;
+
 	cout << "postOrder:" << endl;
 	t->postOrder(t->get_root());
 	cout << endl << post << endl;
 	t->deleteNode(t->get_root(), 10);
+	cout << endl;
+
 	cout << "inOrder after deleting root:" << endl;
 	t->inOrder(t->get_root());
 	cout << endl << "2 4 5 6 7 8 9 11 12 13 ";

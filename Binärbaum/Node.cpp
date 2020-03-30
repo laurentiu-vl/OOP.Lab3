@@ -36,10 +36,10 @@ void Node::set_data(int data1)
 
 Node* Node::get_left()
 {
-	return this->left;
+	return this->left; 
 }
-
-Node* Node::get_right()
+ 
+Node* Node::get_right()  
 {
 	return this->right;
 }
