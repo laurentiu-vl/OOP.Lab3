@@ -25,7 +25,7 @@ class BTree
 
 			Node* insertNode(Node*, int);
 
-			Node* removeNode(Node*, int); //de facut;
+			Node* deleteNode(Node*, int); 
 
 			int countNodes(Node* n);
 
@@ -33,10 +33,10 @@ class BTree
 
 			int countHeight(Node* n);
 
-			string inOrder(Node*);
+			void inOrder(Node*);
 
-			string preOrder(Node*); //de facut;
+			void preOrder(Node*); 
 
-			string postOrder(Node*); //de facut;
+			void postOrder(Node*); 
 
 };
