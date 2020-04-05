@@ -8,4 +8,10 @@ using namespace std;
 int main()
 {
 	test();
+
+	InOrder();
+
+	PreOrder();
+
+	//PostOrder();
 }

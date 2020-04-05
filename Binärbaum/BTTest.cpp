@@ -71,10 +71,72 @@ void test()
 	delete(t);	//EROARE DACA INCERCAM SA ACCESAM t ULTERIOR
 }
 
-void PreOrder(BTree Tree) 
+void InOrder()
 {
-	std::cout << '\n';
-	std::string s = "Preorder: ";
-	s += Tree.preOrder();
-	std::cout << s;
+	Node* n = new Node(10);
+	assert(n->get_data() == 10);
+
+	BTree* t = new BTree(10);
+	t->insertNode(t->get_root(), 6);
+	t->insertNode(t->get_root(), 4);
+	t->insertNode(t->get_root(), 2);
+	t->insertNode(t->get_root(), 5);
+	t->insertNode(t->get_root(), 8);
+	t->insertNode(t->get_root(), 7);
+	t->insertNode(t->get_root(), 9);
+	t->insertNode(t->get_root(), 12);
+	t->insertNode(t->get_root(), 11);
+	t->insertNode(t->get_root(), 13);
+	t->insertNode(t->get_root(), 15);
+
+
+	cout << '\n';
+	string in = "Inorder: ";
+	in += t->inOrder();
+	cout << in;
+}
+
+void PreOrder()
+{
+	Node* n = new Node(10);
+	assert(n->get_data() == 10);
+
+	BTree* t = new BTree(10);
+	t->insertNode(t->get_root(), 6);
+	t->insertNode(t->get_root(), 4);
+	t->insertNode(t->get_root(), 2);
+	t->insertNode(t->get_root(), 5);
+	t->insertNode(t->get_root(), 8);
+	t->insertNode(t->get_root(), 7);
+	t->insertNode(t->get_root(), 9);
+	t->insertNode(t->get_root(), 12);
+	t->insertNode(t->get_root(), 11);
+	t->insertNode(t->get_root(), 13);
+	t->insertNode(t->get_root(), 15);
+
+	cout << '\n';
+	string sir = "Preorder: ";
+	sir += t->preOrder();
+	std::cout << sir;
+}
+
+void PostOrder()
+{
+	Node* n = new Node(10);
+	assert(n->get_data() == 10);
+
+	BTree* t = new BTree(10);
+	t->insertNode(t->get_root(), 6);
+	t->insertNode(t->get_root(), 4);
+	t->insertNode(t->get_root(), 2);
+	t->insertNode(t->get_root(), 5);
+	t->insertNode(t->get_root(), 8);
+	t->insertNode(t->get_root(), 7);
+	t->insertNode(t->get_root(), 9);
+	t->insertNode(t->get_root(), 12);
+	t->insertNode(t->get_root(), 11);
+	t->insertNode(t->get_root(), 13);
+	t->insertNode(t->get_root(), 15);
+
+	//de facut
 }

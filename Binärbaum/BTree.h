@@ -13,6 +13,13 @@ class BTree
 
 			Node* root;
 
+			string inOrder_private(Node*, string);
+
+			string preOrder_private(Node*, string);
+
+			string postOrder_private(Node*, string);
+
+
 	public:
 			//constructor
 			BTree();
