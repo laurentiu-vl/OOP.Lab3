@@ -14,11 +14,13 @@ class BTree
 			Node* root;
 
 	public:
-
+			//constructor
 			BTree();
 
+			//constructor
 			BTree(int);
 
+			//destructor
 			~BTree();
 
 			Node* get_root(); 
@@ -27,16 +29,25 @@ class BTree
 
 			Node* deleteNode(Node*, int); 
 
+			//return nr. of the nodes
 			int countNodes(Node* n);
 
+			//return nr. of the edges
 			int countEdges(Node* n);
 
+			//return the height of the node
 			int countHeight(Node* n);
 
-			void inOrder(Node*);
+			//void inOrder(Node*);
 
-			void preOrder(Node*); 
+			//void preOrder(Node*); 
 
-			void postOrder(Node*); 
+			//void postOrder(Node*); 
+
+			string  inOrder();
+
+			string preOrder();
+
+			string postOrder();
 
 };

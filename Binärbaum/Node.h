@@ -11,15 +11,20 @@ class Node
 		Node* right;
 
 	public:
+		//simple constructor
 		Node();
 
+		//destructor
 		~Node();
 
+		//constructor
 		Node(int);
 
+		//return data from node
 		int get_data();
 
-		int set_data(int);
+		//set another data for node
+		void set_data(int);
 
 		Node* get_left();
 

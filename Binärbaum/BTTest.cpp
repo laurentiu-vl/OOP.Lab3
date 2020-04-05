@@ -46,7 +46,7 @@ void test()
 	cout << "FOR EACH TEST: first row -> function; second row -> expected result";
 	cout << endl;
 
-	cout << "inOrder:";
+	/*cout << "inOrder:";
 	t->inOrder(t->get_root());
 	cout << endl << in << endl;
 	cout << endl;
@@ -65,6 +65,16 @@ void test()
 	cout << "inOrder after deleting root:" << endl;
 	t->inOrder(t->get_root());
 	cout << endl << "2 4 5 6 7 8 9 11 12 13 ";
+	*/
+
 
 	delete(t);	//EROARE DACA INCERCAM SA ACCESAM t ULTERIOR
+}
+
+void PreOrder(BTree Tree) 
+{
+	std::cout << '\n';
+	std::string s = "Preorder: ";
+	s += Tree.preOrder();
+	std::cout << s;
 }

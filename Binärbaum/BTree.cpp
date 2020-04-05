@@ -146,7 +146,7 @@ Node* BTree::deleteNode(Node* root, int k)
     }
 }
 
-void BTree::inOrder(Node* n)
+/*void BTree::inOrder(Node* n)
 {
     if (n == NULL)
         return;
@@ -174,29 +174,5 @@ void BTree::preOrder(Node* n)
     preOrder(n->left);
     preOrder(n->right);
 }
-
-/*
-string BTree::inOrder(Node* n)
-{
-    if (n != NULL)
-    {
-        return inOrder(n->left) + to_string(n->data) + " " + inOrder(n->right); //dam cu cout in main fiindca returneaza;
-    }
-}
-
-string BTree::postOrder(Node* n)
-{
-    if (n != NULL)
-    {
-        return postOrder(n->left) + postOrder(n->right) + to_string(n->data) + " ";
-    }
-}
-
-string BTree::preOrder(Node* n)
-{
-    if (n != NULL)
-    {
-        return  to_string(n->data) + " " + preOrder(n->left) + preOrder(n->right);
-    }
-}
 */
+
