@@ -173,8 +173,8 @@ void BTree::preOrder(Node* n)
     cout << (n->data) << " ";
     preOrder(n->left);
     preOrder(n->right);
-}
-*/
+}*/
+
 
 string BTree::inOrder_private(Node* n, string sir)          //INORDER
 {
@@ -186,10 +186,10 @@ string BTree::inOrder_private(Node* n, string sir)          //INORDER
     return sir;
 }
 
-string BTree::inOrder()
+string BTree::inOrder()                                     //INORDER
 {
     string afis = "";
-    afis = this->inOrder_private(this->root, afis);         //INORDER
+    afis = this->inOrder_private(this->root, afis);        
     return afis;
 }
 
@@ -197,9 +197,9 @@ string BTree::preOrder_private(Node* n, string sir)         //PREORDER
 {
     sir = sir + " " + to_string(n->data);
     if (n->left != nullptr)
-        sir = inOrder_private(n->left, sir);
+        sir = preOrder_private(n->left, sir);
     if (n->right != nullptr)
-        sir = inOrder_private(n->right, sir);
+        sir = preOrder_private(n->right, sir);
     return sir;
 }
 
@@ -211,12 +211,19 @@ string BTree::preOrder()                                    //PREORDER
         return afis;   
 }
 
-string BTree::postOrder()                                   //POSTORDER
-{
-
-}
-
 string BTree::postOrder_private(Node* n, string sir)        //POSTORDER
 {
+    if (n->left != nullptr)
+        sir = postOrder_private(n->left, sir);
+    if (n->right != nullptr)
+        sir = postOrder_private(n->right, sir);
+    sir = sir + " " + to_string(n->data);
+    return sir;
+}
 
+string BTree::postOrder()                                   //POSTORDER
+{
+    string afis = "";
+    afis = this->postOrder_private(root, afis);
+    return afis;
 }

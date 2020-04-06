@@ -45,7 +45,7 @@ class BTree
 			//return the height of the node
 			int countHeight(Node* n);
 
-			//void inOrder(Node*);
+			//void inOrder(Node*);		//I replaced the void functions with string functions
 
 			//void preOrder(Node*); 
 

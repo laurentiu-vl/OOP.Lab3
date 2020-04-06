@@ -33,9 +33,9 @@ void test()
 	
 */	
 	//cout << t->inOrder(t->get_root());
-	string in = "2 4 5 6 7 8 9 10 11 12 13 ";
-	string pre = "10 6 4 2 5 8 7 9 12 11 13 ";
-	string post = "2 5 4 7 9 8 6 11 13 12 10 ";
+	//string in = "2 4 5 6 7 8 9 10 11 12 13 (15)";
+	//string pre = "10 6 4 2 5 8 7 9 12 11 13 (15) ";
+	//string post = "2 5 4 7 9 8 6 11 13 12 10 ";
 
 	t->deleteNode(t->get_root(),15);
 	assert((t->get_root())->get_data() == 10);
@@ -43,20 +43,20 @@ void test()
 	assert(t->countEdges(t->get_root()) == 10);
 	assert(t->countHeight(t->get_root()) == 4);
 	
-	cout << "FOR EACH TEST: first row -> function; second row -> expected result";
-	cout << endl;
+	cout << "FOR EACH TEST: first row -> function; second row -> expected result\n";
+
 
 	/*cout << "inOrder:";
 	t->inOrder(t->get_root());
 	cout << endl << in << endl;
 	cout << endl;
-
+	
 	cout << "preOrder:" << endl;
 	t->preOrder(t->get_root());
-	cout << endl << pre << endl;
+	//cout << endl << t << endl;
 	cout << endl;
 
-	cout << "postOrder:" << endl;
+	/*cout << "postOrder:" << endl;
 	t->postOrder(t->get_root());
 	cout << endl << post << endl;
 	t->deleteNode(t->get_root(), 10);
@@ -93,7 +93,7 @@ void InOrder()
 	cout << '\n';
 	string in = "Inorder: ";
 	in += t->inOrder();
-	cout << in;
+	cout << in <<"\n";
 }
 
 void PreOrder()
@@ -117,7 +117,7 @@ void PreOrder()
 	cout << '\n';
 	string sir = "Preorder: ";
 	sir += t->preOrder();
-	std::cout << sir;
+	cout << sir << "\n";
 }
 
 void PostOrder()
@@ -137,6 +137,11 @@ void PostOrder()
 	t->insertNode(t->get_root(), 11);
 	t->insertNode(t->get_root(), 13);
 	t->insertNode(t->get_root(), 15);
+	
+	t->deleteNode(t->get_root(), 15); //am sters ultimul nod
 
-	//de facut
+	cout << '\n';
+	string s = "Postorder: ";
+	s += t->postOrder();
+	std::cout << s << "\n";
 }

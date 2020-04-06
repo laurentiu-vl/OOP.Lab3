@@ -13,5 +13,5 @@ int main()
 
 	PreOrder();
 
-	//PostOrder();
+	PostOrder();
 }
