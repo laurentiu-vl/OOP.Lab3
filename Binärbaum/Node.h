@@ -5,6 +5,16 @@ using namespace std;
 
 class Node
 {
+	/**
+	 * @class	BTree
+	 *
+	 * @brief	A tree.
+	 *
+	 * @author	Laurentiu
+	 * @date	15-Apr-20
+	 */
+	friend class BTree;
+
 	private: 
 			/** @brief	The data */
 		int data;
@@ -105,19 +115,5 @@ class Node
 		//Node* set_left(int);  Am pus friend class BTree si nu mai trebuie setter si gettere. Dar am gett., nu le-am mai sters din BTree.cpp si Node.cpp
 
 		//Node* set_right(int);
-
-	public:
-
-		/**
-		 * @class	BTree
-		 *
-		 * @brief	A tree.
-		 *
-		 * @author	Laurentiu
-		 * @date	15-Apr-20
-		 */
-
-		friend class BTree;
-		
 		
 };
