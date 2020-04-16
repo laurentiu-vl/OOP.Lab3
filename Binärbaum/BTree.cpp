@@ -76,7 +76,7 @@ int BTree::countHeight(Node* n)
 
 }
 
-Node* BTree::insertNode(Node* n, int data)
+Node* BTree::insert(Node* n, int data)
 {
     if (n == NULL)
     {
@@ -84,27 +84,34 @@ Node* BTree::insertNode(Node* n, int data)
     }
     else
     {
-        if (data < n->get_data())
-            n->left = insertNode(n->get_left(), data); 
+        if (data == n->get_data())
+            return nullptr;
+        else if (data < n->get_data())
+            n->left = insert(n->get_left(), data); 
         else 
-            n->right = insertNode(n->get_right(), data);
+            n->right = insert(n->get_right(), data);
     }
     return n;
 }
 
-Node* BTree::deleteNode(Node* root, int k)
+void BTree::insertNode(int data)
+{
+    this->insert(this->root, data);
+}
+
+Node* BTree::deletes(Node* root, int k)
 {
     if (root == NULL)
         return root;
 
     if (root->get_data() > k)
     {
-        root->left = deleteNode(root->get_left(), k);
+        root->left = deletes(root->left, k);
         return root;
     }
     else if (root->get_data() < k)
     {
-        root->right = deleteNode(root->get_right(), k);
+        root->right = deletes(root->right, k);
         return root;
     }
 
@@ -121,21 +128,22 @@ Node* BTree::deleteNode(Node* root, int k)
         delete root;
         return temp;
     }
-
-    // If both children exist 
-    else
+    else //if both chilldren exist
     {
-        Node* succParent = root->get_right();
+        Node* succParent = root;
 
         // Find successor 
         Node* succ = root->get_right();
         while (succ->get_left() != NULL)
         {
             succParent = succ;
-            succ = succ->get_left();
+            succ = succ->left;
         }
 
-        succParent->left = succ->get_right();
+        if (succParent->data != root->data)
+            succParent->left = succ->right;
+        else
+            succParent->right = succ->right;
 
         // Copy Successor Data to root 
         root->data = succ->get_data();
@@ -145,6 +153,13 @@ Node* BTree::deleteNode(Node* root, int k)
         return root;
     }
 }
+
+
+void BTree::deleteNode(int data)
+{
+    this->deletes(this->root, data);
+}
+
 
 /*void BTree::inOrder(Node* n)
 {

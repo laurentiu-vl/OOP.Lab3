@@ -13,17 +13,17 @@ void test()
 	assert(n->get_data() == 10);
 
 	BTree* t = new BTree(10);
-	t->insertNode(t->get_root(),6);
-	t->insertNode(t->get_root(),4);
-	t->insertNode(t->get_root(),2);
-	t->insertNode(t->get_root(),5);
-	t->insertNode(t->get_root(),8);
-	t->insertNode(t->get_root(),7);
-	t->insertNode(t->get_root(),9);
-	t->insertNode(t->get_root(),12);
-	t->insertNode(t->get_root(),11);
-	t->insertNode(t->get_root(),13);
-	t->insertNode(t->get_root(),15);
+	t->insertNode(6);
+	t->insertNode(4);
+	t->insertNode(2);
+	t->insertNode(5);
+	t->insertNode(8);
+	t->insertNode(7);
+	t->insertNode(9);
+	t->insertNode(12);
+	t->insertNode(11);
+	t->insertNode(13);
+	t->insertNode(15);
 
 	
 /*	t:						10
@@ -37,13 +37,13 @@ void test()
 	//string pre = "10 6 4 2 5 8 7 9 12 11 13 (15) ";
 	//string post = "2 5 4 7 9 8 6 11 13 12 10 ";
 
-	t->deleteNode(t->get_root(),15);
+	t->deleteNode(15);
 	assert((t->get_root())->get_data() == 10);
 	assert(t->countNodes(t->get_root()) == 11);
 	assert(t->countEdges(t->get_root()) == 10);
 	assert(t->countHeight(t->get_root()) == 4);
 	
-	cout << "FOR EACH TEST: first row -> function; second row -> expected result\n";
+	//cout << "FOR EACH TEST: first row -> function; second row -> expected result\n";
 
 
 	/*cout << "inOrder:";
@@ -77,17 +77,17 @@ void InOrder()
 	assert(n->get_data() == 10);
 
 	BTree* t = new BTree(10);
-	t->insertNode(t->get_root(), 6);
-	t->insertNode(t->get_root(), 4);
-	t->insertNode(t->get_root(), 2);
-	t->insertNode(t->get_root(), 5);
-	t->insertNode(t->get_root(), 8);
-	t->insertNode(t->get_root(), 7);
-	t->insertNode(t->get_root(), 9);
-	t->insertNode(t->get_root(), 12);
-	t->insertNode(t->get_root(), 11);
-	t->insertNode(t->get_root(), 13);
-	t->insertNode(t->get_root(), 15);
+	t->insertNode(6);
+	t->insertNode(4);
+	t->insertNode(2);
+	t->insertNode(5);
+	t->insertNode(8);
+	t->insertNode(7);
+	t->insertNode(9);
+	t->insertNode(12);
+	t->insertNode(11);
+	t->insertNode(13);
+	t->insertNode(15);
 
 
 	cout << '\n';
@@ -102,17 +102,17 @@ void PreOrder()
 	assert(n->get_data() == 10);
 
 	BTree* t = new BTree(10);
-	t->insertNode(t->get_root(), 6);
-	t->insertNode(t->get_root(), 4);
-	t->insertNode(t->get_root(), 2);
-	t->insertNode(t->get_root(), 5);
-	t->insertNode(t->get_root(), 8);
-	t->insertNode(t->get_root(), 7);
-	t->insertNode(t->get_root(), 9);
-	t->insertNode(t->get_root(), 12);
-	t->insertNode(t->get_root(), 11);
-	t->insertNode(t->get_root(), 13);
-	t->insertNode(t->get_root(), 15);
+	t->insertNode(6);
+	t->insertNode(4);
+	t->insertNode(2);
+	t->insertNode(5);
+	t->insertNode(8);
+	t->insertNode(7);
+	t->insertNode(9);
+	t->insertNode(12);
+	t->insertNode(11);
+	t->insertNode(13);
+	t->insertNode(15);;
 
 	cout << '\n';
 	string sir = "Preorder: ";
@@ -126,19 +126,19 @@ void PostOrder()
 	assert(n->get_data() == 10);
 
 	BTree* t = new BTree(10);
-	t->insertNode(t->get_root(), 6);
-	t->insertNode(t->get_root(), 4);
-	t->insertNode(t->get_root(), 2);
-	t->insertNode(t->get_root(), 5);
-	t->insertNode(t->get_root(), 8);
-	t->insertNode(t->get_root(), 7);
-	t->insertNode(t->get_root(), 9);
-	t->insertNode(t->get_root(), 12);
-	t->insertNode(t->get_root(), 11);
-	t->insertNode(t->get_root(), 13);
-	t->insertNode(t->get_root(), 15);
+	t->insertNode(6);
+	t->insertNode(4);
+	t->insertNode(2);
+	t->insertNode(5);
+	t->insertNode(8);
+	t->insertNode(7);
+	t->insertNode(9);
+	t->insertNode(12);
+	t->insertNode(11);
+	t->insertNode(13);
+	t->insertNode(15);
 	
-	t->deleteNode(t->get_root(), 15); //am sters ultimul nod
+	t->deleteNode(15); //am sters ultimul nod
 
 	cout << '\n';
 	string s = "Postorder: ";

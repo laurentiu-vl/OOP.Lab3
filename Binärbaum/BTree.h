@@ -124,7 +124,7 @@ class BTree
 			Node* get_root(); 
 
 			/**
-			 * @fn	Node* BTree::insertNode(Node*, int);
+			 * @fn	Node* BTree::insert(Node*, int);
 			 *
 			 * @brief	Inserts a node
 			 *
@@ -137,10 +137,12 @@ class BTree
 			 * @returns	Null if it fails, else a pointer to a Node.
 			 */
 
-			Node* insertNode(Node*, int);
+			Node* insert(Node*, int);
+
+			void insertNode(int data);
 
 			/**
-			 * @fn	Node* BTree::deleteNode(Node*, int);
+			 * @fn	Node* BTree::deletes(Node*, int);
 			 *
 			 * @brief	Deletes the node
 			 *
@@ -152,8 +154,11 @@ class BTree
 			 *
 			 * @returns	Null if it fails, else a pointer to a Node.
 			 */
+		
 
-			Node* deleteNode(Node*, int); 
+			Node* deletes(Node*, int); 
+
+			void deleteNode(int data);
 
 			/**
 			 * @fn	int BTree::countNodes(Node* n);
