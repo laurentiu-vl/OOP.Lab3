@@ -138,7 +138,7 @@ void PostOrder()
 	t->insertNode(13);
 	t->insertNode(15);
 	
-	t->deleteNode(15); //am sters ultimul nod
+	t->deleteNode(15); /// am sters ultimul nod
 
 	cout << '\n';
 	string s = "Postorder: ";

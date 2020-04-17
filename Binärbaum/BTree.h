@@ -8,20 +8,9 @@ using namespace std;
 
 class BTree
 {
-	/**
-	 * @class	Node
-	 *
-	 * @brief	A node.
-	 *
-	 * @author	Laurentiu
-	 * @date	15-Apr-20
-	 */
-
 	friend class Node;
 
 	private:
-
-			/** @brief	The root */
 			Node* root;
 
 			/**
@@ -139,6 +128,17 @@ class BTree
 
 			Node* insert(Node*, int);
 
+			/**
+			 * @fn	void BTree::insertNode(int data);
+			 *
+			 * @brief	Inserts a node described by data
+			 *
+			 * @author	Laurentiu
+			 * @date	17-Apr-20
+			 *
+			 * @param 	data	The data.
+			 */
+
 			void insertNode(int data);
 
 			/**
@@ -154,9 +154,19 @@ class BTree
 			 *
 			 * @returns	Null if it fails, else a pointer to a Node.
 			 */
-		
 
 			Node* deletes(Node*, int); 
+
+			/**
+			 * @fn	void BTree::deleteNode(int data);
+			 *
+			 * @brief	Deletes the node described by data
+			 *
+			 * @author	Laurentiu
+			 * @date	17-Apr-20
+			 *
+			 * @param 	data	The data.
+			 */
 
 			void deleteNode(int data);
 
