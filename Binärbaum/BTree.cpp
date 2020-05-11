@@ -35,7 +35,13 @@ Node* BTree::get_root()
 	return root;
 }
 
-int BTree::countNodes(Node* n)
+int BTree::countNodes()
+{
+    return countNodes_private(this->get_root());
+}
+
+
+int BTree::countNodes_private(Node* n)
 {
     if (n == NULL) 
     {
@@ -43,11 +49,16 @@ int BTree::countNodes(Node* n)
     }
     else 
     {
-        return 1 + countNodes(n->get_left()) + countNodes(n->get_right());
+        return 1 + countNodes_private(n->get_left()) + countNodes_private(n->get_right());
     }
 }
 
-int BTree::countEdges(Node* n)
+int BTree::countEdges()
+{
+    return countEdges_private(this->get_root());
+}
+
+int BTree::countEdges_private(Node* n)
 {
     if (n == NULL)
     {
@@ -55,19 +66,24 @@ int BTree::countEdges(Node* n)
     }
     else
     {
-        return countNodes(n) - 1;
+        return countNodes_private(n) - 1;
     }
 
 }
 
-int BTree::countHeight(Node* n)
+int BTree::countHeight()
+{
+    return countHeight_private(this->get_root());
+}
+
+int BTree::countHeight_private(Node* n)
 {
     if (n == NULL)
         return 0;
     else
     {
-        int leftDepth = countHeight(n->left);
-        int rightDepth = countHeight(n->right);
+        int leftDepth = countHeight_private(n->get_left());
+        int rightDepth = countHeight_private(n->get_right());
         if (leftDepth > rightDepth)
             return (leftDepth + 1);
         else
@@ -154,42 +170,10 @@ Node* BTree::deletes(Node* root, int k)
     }
 }
 
-
 void BTree::deleteNode(int data)
 {
     this->deletes(this->root, data);
 }
-
-
-/*void BTree::inOrder(Node* n)
-{
-    if (n == NULL)
-        return;
-    
-    inOrder(n->left);
-    cout << (n->data) << " ";
-    inOrder(n->right);
-}
-
-void BTree::postOrder(Node* n)
-{
-    if (n == NULL)
-        return;
-    
-    postOrder(n->left);
-    postOrder(n->right);
-    cout << (n->data) << " ";
-}
-
-void BTree::preOrder(Node* n)
-{
-    if (n == NULL)
-        return;
-    cout << (n->data) << " ";
-    preOrder(n->left);
-    preOrder(n->right);
-}*/
-
 
 string BTree::inOrder_private(Node* n, string sir)          //INORDER
 {

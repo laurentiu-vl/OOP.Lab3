@@ -32,41 +32,15 @@ void test()
 	2		5		7		9					(15)
 	
 */	
-	//cout << t->inOrder(t->get_root());
-	//string in = "2 4 5 6 7 8 9 10 11 12 13 (15)";
-	//string pre = "10 6 4 2 5 8 7 9 12 11 13 (15) ";
-	//string post = "2 5 4 7 9 8 6 11 13 12 10 ";
+	//string inOrder = "2 4 5 6 7 8 9 10 11 12 13 (15)";
+	//string preOrder = "10 6 4 2 5 8 7 9 12 11 13 (15) ";
+	//string postOrder = "2 5 4 7 9 8 6 11 13 12 10 ";
 
 	t->deleteNode(15);
 	assert((t->get_root())->get_data() == 10);
-	assert(t->countNodes(t->get_root()) == 11);
-	assert(t->countEdges(t->get_root()) == 10);
-	assert(t->countHeight(t->get_root()) == 4);
-	
-	//cout << "FOR EACH TEST: first row -> function; second row -> expected result\n";
-
-
-	/*cout << "inOrder:";
-	t->inOrder(t->get_root());
-	cout << endl << in << endl;
-	cout << endl;
-	
-	cout << "preOrder:" << endl;
-	t->preOrder(t->get_root());
-	//cout << endl << t << endl;
-	cout << endl;
-
-	/*cout << "postOrder:" << endl;
-	t->postOrder(t->get_root());
-	cout << endl << post << endl;
-	t->deleteNode(t->get_root(), 10);
-	cout << endl;
-
-	cout << "inOrder after deleting root:" << endl;
-	t->inOrder(t->get_root());
-	cout << endl << "2 4 5 6 7 8 9 11 12 13 ";
-	*/
-
+	assert(t->countNodes() == 11);
+	assert(t->countEdges() == 10);
+	assert(t->countHeight() == 4);
 
 	delete(t);	//EROARE DACA INCERCAM SA ACCESAM t ULTERIOR
 }
@@ -91,8 +65,10 @@ void InOrder()
 
 
 	cout << '\n';
-	string in = "Inorder: ";
+	string inOrder = "Inorder: 2 4 5 6 7 8 9 10 11 12 13 15";
+	string in = "Inorder:";
 	in += t->inOrder();
+	assert(in.compare(inOrder) == 0);
 	cout << in <<"\n";
 }
 
@@ -115,8 +91,11 @@ void PreOrder()
 	t->insertNode(15);;
 
 	cout << '\n';
-	string sir = "Preorder: ";
+
+	string preOrder = "Preorder: 10 6 4 2 5 8 7 9 12 11 13 15";
+	string sir = "Preorder:";
 	sir += t->preOrder();
+	assert(sir.compare(preOrder) == 0);
 	cout << sir << "\n";
 }
 
@@ -141,7 +120,9 @@ void PostOrder()
 	t->deleteNode(15); //am sters ultimul nod
 
 	cout << '\n';
-	string s = "Postorder: ";
+	string postOrder = "Postorder: 2 5 4 7 9 8 6 11 13 12 10";
+	string s = "Postorder:";
 	s += t->postOrder();
+	assert(s.compare(postOrder) == 0);
 	std::cout << s << "\n";
 }

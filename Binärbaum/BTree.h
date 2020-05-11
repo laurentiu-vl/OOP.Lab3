@@ -25,6 +25,69 @@ class BTree
 			Node* root;
 
 			/**
+			* @fn	Node* BTree::insert(Node*, int);
+			*
+			* @brief	Inserts a node (but needs the root as parameter)
+						It's an intermidiate for the function insertNode.
+			*
+			* @author	Laurentiu
+			* @date	15-Apr-20
+			*
+			* @param [in,out]	parameter1	If non-null, the first parameter.
+			* @param 		  	parameter2	The second parameter(allways the root)
+			*
+			* @returns	Null if it fails, else a pointer to a Node.
+			*/
+
+			Node* insert(Node*, int);
+
+			/**
+			 * @fn	Node* BTree::deletes(Node*, int);
+			*
+			* @brief	Deletes the node(INTERMIDATE FUNCTION)
+			*
+			 * @param [in,out]	parameter1	If non-null, the first parameter.
+			* @param 		  	parameter2	The second parameter.
+			*
+			* @returns	Null if it fails, else a pointer to a Node.
+			*/
+
+			Node* deletes(Node*, int);
+
+			/**
+			* @fn	int BTree::countNodes_private(Node* );
+			*
+			* @brief	Count nodes
+			*
+			 * @param [in,out]	parameter1	If non-null, the first parameter.
+			 * @returns	The total number of nodes.
+			*/
+
+			int countNodes_private(Node* n);
+
+			/**
+			 * @fn	int BTree::countEdges_private(Node* n);
+			 *
+			 * @brief	Count edges
+			 *
+			 * @param [in,out]	parameter1	If non-null, the first parameter.
+			 * @returns	The total number of edges.
+			 */
+
+			int countEdges_private(Node* n);
+
+			/**
+			 * @fn	int BTree::countHeight_private(Node* n);
+			 *
+			 * @brief	Count height
+			 *
+			 * @param [in,out]	parameter1	If non-null, the first parameter.
+			 * @returns	The total number of height.
+			 */
+
+			int countHeight_private(Node* n);
+
+			/**
 			 * @fn	string BTree::inOrder_private(Node*, string);
 			 *
 			 * @brief	In order private
@@ -37,6 +100,7 @@ class BTree
 			 *
 			 * @returns	A string.
 			 */
+
 
 			string inOrder_private(Node*, string);
 
@@ -124,92 +188,62 @@ class BTree
 			Node* get_root(); 
 
 			/**
-			 * @fn	Node* BTree::insert(Node*, int);
-			 *
-			 * @brief	Inserts a node
-			 *
-			 * @author	Laurentiu
-			 * @date	15-Apr-20
-			 *
-			 * @param [in,out]	parameter1	If non-null, the first parameter.
-			 * @param 		  	parameter2	The second parameter.
-			 *
-			 * @returns	Null if it fails, else a pointer to a Node.
-			 */
-
-			Node* insert(Node*, int);
-
+			* @fn	Node* BTree::insertNode(int);
+			*
+			* @brief	Inserts a node 
+			*
+			* @author	Laurentiu
+			* @date	15-Apr-20
+			*		
+			* @param	parameter1	The first parameter
+			*/
+			
 			void insertNode(int data);
 
 			/**
-			 * @fn	Node* BTree::deletes(Node*, int);
+			 * @fn	Node* BTree::deletesNode(int);
 			 *
 			 * @brief	Deletes the node
 			 *
 			 * @author	Laurentiu
 			 * @date	15-Apr-20
+			 *	
+			 * @param	parameter1	The first parameter.
 			 *
-			 * @param [in,out]	parameter1	If non-null, the first parameter.
-			 * @param 		  	parameter2	The second parameter.
-			 *
-			 * @returns	Null if it fails, else a pointer to a Node.
 			 */
 		
-
-			Node* deletes(Node*, int); 
 
 			void deleteNode(int data);
 
 			/**
-			 * @fn	int BTree::countNodes(Node* n);
+			 * @fn	int BTree::countNodes();
 			 *
 			 * @brief	Count nodes
-			 *
-			 * @author	Laurentiu
-			 * @date	15-Apr-20
-			 *
-			 * @param [in,out]	n	If non-null, a Node to process.
 			 *
 			 * @returns	The total number of nodes.
 			 */
 
-			int countNodes(Node* n);
+			int countNodes();
 
 			/**
-			 * @fn	int BTree::countEdges(Node* n);
+			 * @fn	int BTree::countEdges();
 			 *
 			 * @brief	Count edges
-			 *
-			 * @author	Laurentiu
-			 * @date	15-Apr-20
-			 *
-			 * @param [in,out]	n	If non-null, a Node to process.
 			 *
 			 * @returns	The total number of edges.
 			 */
 
-			int countEdges(Node* n);
+			int countEdges();
 
 			/**
-			 * @fn	int BTree::countHeight(Node* n);
+			 * @fn	int BTree::countHeight();
 			 *
 			 * @brief	Count height
-			 *
-			 * @author	Laurentiu
-			 * @date	15-Apr-20
-			 *
-			 * @param [in,out]	n	If non-null, a Node to process.
 			 *
 			 * @returns	The total number of height.
 			 */
 
-			int countHeight(Node* n);
-
-			//void inOrder(Node*);		//I replaced the void functions with string functions
-
-			//void preOrder(Node*); 
-
-			//void postOrder(Node*); 
+			int countHeight();
 
 			/**
 			 * @fn	string BTree::inOrder();
